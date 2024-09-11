@@ -19,7 +19,7 @@ public class RoleController {
     @PostMapping
     public ResponseEntity<Role> createRole(@RequestBody  Role role) throws Exception {
         Role createdRole=roleService.createRole(role);
-   return new ResponseEntity<>(createdRole, HttpStatus.CREATED);
+       return new ResponseEntity<>(createdRole, HttpStatus.CREATED);
 }
     @GetMapping("/{roleName}")
     public ResponseEntity<?> getRoleByRoleName(@PathVariable String roleName) {
